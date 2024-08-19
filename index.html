@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <meta charset="utf-8">
+    <meta http-equiv="CACHE-CONTROL" content="NO-CACHE" />
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+
+    <title>Staffpoint™</title>
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
+
+    <link rel="SHORTCUT ICON" href="favicon.png" type="image/vnd.microsoft.icon" />
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+
+
+    <link href="assets/jQueryUI/css/custom-theme/jquery-ui-1.8.20.custom.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="assets/styles/Default/jquery.fileupload-ui.css" />
+    <link rel="stylesheet" href="assets/styles/Default/style.css" />
+    <link href="assets/css/Staffpoint3.css?v=3.8" rel="stylesheet" type="text/css" />
+
+    <link href="assets/css/font-awesome.css" rel="stylesheet" type="text/css" />
+
+
+    <link href="assets/javascript/Kalendae/kalendae.css" rel="stylesheet" type="text/css" />
+    <script src="assets/javascript/jQuery/jquery-1.7.2.min.js" type="text/javascript"></script>
+
+    <!-- to work properly Bootstrap.js needs to be below jquery -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+
+    <script src="assets/javascript/jQuery/jquery-ui-1.8.16.custom.min.js" type="text/javascript"></script>
+    <script src="assets/javascript/jQuery/jquery.tools.min.js" type="text/javascript"></script>
+    <script src="assets/javascript/jQuery/jquery.ba-hashchange.js" type="text/javascript"></script>
+    <script src="assets/jQueryUI/js/jquery-ui-1.8.20.custom.min.js" type="text/javascript"></script>
+    <script src="assets/jQueryUI/js/jquery.tmpl.min.js" type="text/javascript"></script>
+    <script src="assets/javascript/jQuery/jquery.form.js" type="text/javascript"></script>
+    <script src="assets/javascript/Kalendae/kalendae.min.js" type="text/javascript"></script>
+    <script src="assets/javascript/jQuery/DateFormat.js" type="text/javascript"></script>
+    <script src="assets/javascript/jQuery/jquery.dateFormat-1.0.js" type="text/javascript"></script>
+    <script src="assets/javascript/jQuery/OptimaValidation.js" type="text/javascript"></script>
+    <script src="assets/javascript/jQuery/MaskedInput.js" type="text/javascript"></script>
+    <script src="assets/javascript/jQuery/jQuery-Placeholder.js" type="text/javascript"></script>
+    <script src="assets/javascript/moment.js" type="text/javascript"></script>
+    <script src="assets/javascript/moment-timezone-with-data.js" type="text/javascript"></script>
+    <script src="https://kit.fontawesome.com/51d329ced8.js" crossorigin="anonymous"></script>
+    <script src="jquery.ui.touch-punch.min.js"></script>
+    <!--[if lt IE 9]>
+       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+    <tbody>
+        <tr>
+            <td valign="top">
+                <div class="staffInfo" style="width: 780px;">
+                    <table style="width: 100%" cellpadding="0" cellspacing="0" border="0">
+                        <tbody>
+                            <tr>
+                                <td>Columns
+                                </td>
+                                <td colspan="3">
+                                    <div style="text-align: center">
+                                        Drag and drop columns that you want to add.
+                                    </div>
+                                    <table id="tblColumns">
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    <div class="customColumns">
+                                                        <ul id="sortable1" class="droptrue ui-sortable">
+                                                            <li class="ui-state-default " val="Address"
+                                                                data-billingtype="false">Address</li>
+                                                            <li class="ui-state-default " val="Alternate contact 1"
+                                                                data-billingtype="false">Alternate contact 1</li>
+                                                            <li class="ui-state-default " val="AlternateContactEmail"
+                                                                data-billingtype="false">Alternate contact email</li>
+                                                            <li class="ui-state-default "
+                                                                val="AlternateContactTelephone"
+                                                                data-billingtype="false">Alternate contact phone</li>
+                                                            <li class="ui-state-default " val="CityName"
+                                                                data-billingtype="false">City</li>
+                                                            <li class="ui-state-default " val="Id"
+                                                                data-billingtype="false">Client ID</li>
+                                                            <li class="ui-state-default " val="Code"
+                                                                data-billingtype="false">Code</li>
+                                                            <li class="ui-state-default " val="Date testing"
+                                                                data-billingtype="false">Date testing</li>
+                                                            <li class="ui-state-default " val="Email"
+                                                                data-billingtype="false">Email</li>
+                                                            <li class="ui-state-default " val="Fax"
+                                                                data-billingtype="false">Fax</li>
+                                                            <li class="ui-state-default "
+                                                                val="How did you hear about us"
+                                                                data-billingtype="false">How did you hear about us</li>
+                                                            <li class="ui-state-default " val="LocationReference"
+                                                                data-billingtype="false">Location Reference</li>
+                                                            <li class="ui-state-default " val="MainClient"
+                                                                data-billingtype="false">Main client</li>
+                                                            <li class="ui-state-default " val="MainClientId"
+                                                                data-billingtype="false">Main client ID</li>
+                                                            <li class="ui-state-default " val="MainContactName"
+                                                                data-billingtype="false">Main contact name</li>
+                                                            <li class="ui-state-default " val="Name"
+                                                                data-billingtype="false">Name</li>
+                                                            <li class="ui-state-default " val="OneDrive Link"
+                                                                data-billingtype="false">OneDrive Link</li>
+                                                            <li class="ui-state-default " val="PostalCode"
+                                                                data-billingtype="false">Postal code</li>
+                                                            <li class="ui-state-default " val="Province"
+                                                                data-billingtype="false">Province</li>
+                                                            <li class="ui-state-default " val="StartDate"
+                                                                data-billingtype="false">Start Date</li>
+                                                            <li class="ui-state-default " val="Telephone"
+                                                                data-billingtype="false">Telephone</li>
+                                                            <li class="ui-state-default " val="TotalShifts"
+                                                                data-billingtype="false">Total Assignments</li>
+                                                            <li class="ui-state-default " val="TotalHours"
+                                                                data-billingtype="false">Total Hours</li>
+                                                        </ul>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="customColumns">
+                                                        <ul id="sortable2" class="droptrue ui-sortable">
+                                                            <li class="ui-state-default" val="AlternateContactName"
+                                                                data-billingtype="false" style="">Alternate contact name
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <input name="hfColumns" type="hidden" id="hfColumns">
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </td>
+        </tr>
+    </tbody>
+    <br />
+    <br />
+    <div class="p-4">
+
+        <div class="customColumns">
+            <ul id="demo" class="droptrue ui-sortable pl-0 menu_list ">
+                <li class="ui-state-default " val="Address" data-billingtype="false">
+                    <div class="p-2 alert alert-secondary fade show alert_box course d-block mb-1">
+                        <i class="icon-grip fa-solid fa-grip-vertical"></i>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input position-static" type="checkbox" id="blankCheckbox"
+                                value="option1" aria-label="...">
+                        </div>
+                        Address
+                    </div>
+                </li>
+                <li class="ui-state-default " val="Alternate contact 1" data-billingtype="false">
+                    <div class="p-2 alert alert-secondary fade show alert_box course d-block mb-1">
+                        <i class="icon-grip fa-solid fa-grip-vertical"></i>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input position-static" type="checkbox" id="blankCheckbox"
+                                value="option1" aria-label="...">
+                        </div>
+                        Alternate contact 1
+                    </div>
+                </li>
+                <li class="ui-state-default " val="AlternateContactEmail" data-billingtype="false">
+                    <div class="p-2 alert alert-secondary fade show alert_box course d-block mb-1">
+                        <i class="icon-grip fa-solid fa-grip-vertical"></i>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input position-static" type="checkbox" id="blankCheckbox"
+                                value="option1" aria-label="...">
+                        </div>
+                        Alternate contact email
+                    </div>
+                </li>
+                <li class="ui-state-default " val="AlternateContactTelephone" data-billingtype="false">
+                    <div class="p-2 alert alert-secondary fade show alert_box course d-block mb-1">
+                        <i class="icon-grip fa-solid fa-grip-vertical"></i>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input position-static" type="checkbox" id="blankCheckbox"
+                                value="option1" aria-label="...">
+                        </div>
+                        Alternate contact phone
+                    </div>
+                </li>
+                <li class="ui-state-default " val="CityName" data-billingtype="false">
+                    <div class="p-2 alert alert-secondary fade show alert_box course d-block mb-1">
+                        <i class="icon-grip fa-solid fa-grip-vertical"></i>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input position-static" type="checkbox" id="blankCheckbox"
+                                value="option1" aria-label="...">
+                        </div> City
+                    </div>
+                </li>
+                <li class="ui-state-default " val="Id" data-billingtype="false">
+                    <div class="p-2 alert alert-secondary fade show alert_box course d-block mb-1">
+                        <i class="icon-grip fa-solid fa-grip-vertical"></i>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input position-static" type="checkbox" id="blankCheckbox"
+                                value="option1" aria-label="...">
+                        </div>
+                        Client ID
+                    </div>
+                </li>
+                <li class="ui-state-default " val="Code" data-billingtype="false">
+                    <div class="p-2 alert alert-secondary fade show alert_box course d-block mb-1">
+                        <i class="icon-grip fa-solid fa-grip-vertical"></i>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input position-static" type="checkbox" id="blankCheckbox"
+                                value="option1" aria-label="...">
+                        </div>
+                        Code
+                    </div>
+                </li>
+                <li class="ui-state-default " val="Date testing" data-billingtype="false">
+                    <div class="p-2 alert alert-secondary fade show alert_box course d-block mb-1">
+                        <i class="icon-grip fa-solid fa-grip-vertical"></i>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input position-static" type="checkbox" id="blankCheckbox"
+                                value="option1" aria-label="...">
+                        </div>
+                        Date testing
+                    </div>
+                </li>
+                <li class="ui-state-default " val="Email" data-billingtype="false">
+                    <div class="p-2 alert alert-secondary fade show alert_box course d-block mb-1">
+                        <i class="icon-grip fa-solid fa-grip-vertical"></i>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input position-static" type="checkbox" id="blankCheckbox"
+                                value="option1" aria-label="...">
+                        </div>
+                        Email
+                    </div>
+                </li>
+                <li class="ui-state-default " val="Fax" data-billingtype="false">
+                    <div class="p-2 alert alert-secondary fade show alert_box course d-block mb-1">
+                        <i class="icon-grip fa-solid fa-grip-vertical"></i>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input position-static" type="checkbox" id="blankCheckbox"
+                                value="option1" aria-label="...">
+                        </div>
+                        Fax
+                    </div>
+                </li>
+                <li class="ui-state-default " val="How did you hear about us" data-billingtype="false">
+                    <div class="p-2 alert alert-secondary fade show alert_box course d-block mb-1">
+                        <i class="icon-grip fa-solid fa-grip-vertical"></i>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input position-static" type="checkbox" id="blankCheckbox"
+                                value="option1" aria-label="...">
+                        </div>
+                        How did you hear about us
+                    </div>
+                </li>
+                <li class="ui-state-default " val="LocationReference" data-billingtype="false">
+                    <div class="p-2 alert alert-secondary fade show alert_box course d-block mb-1">
+                        <i class="icon-grip fa-solid fa-grip-vertical"></i>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input position-static" type="checkbox" id="blankCheckbox"
+                                value="option1" aria-label="...">
+                        </div>
+                        Location
+                        Reference
+                    </div>
+                </li>
+                <li class="ui-state-default " val="MainClient" data-billingtype="false">
+                    <div class="p-2 alert alert-secondary fade show alert_box course d-block mb-1">
+                        <i class="icon-grip fa-solid fa-grip-vertical"></i>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input position-static" type="checkbox" id="blankCheckbox"
+                                value="option1" aria-label="...">
+                        </div>
+                        Main client
+                    </div>
+                </li>
+                <li class="ui-state-default " val="MainClientId" data-billingtype="false">
+                    <div class="p-2 alert alert-secondary fade show alert_box course d-block mb-1">
+                        <i class="icon-grip fa-solid fa-grip-vertical"></i>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input position-static" type="checkbox" id="blankCheckbox"
+                                value="option1" aria-label="...">
+                        </div>
+                        Main client ID
+                    </div>
+                </li>
+                <li class="ui-state-default " val="MainContactName" data-billingtype="false">
+                    <div class="p-2 alert alert-secondary fade show alert_box course d-block mb-1">
+                        <i class="icon-grip fa-solid fa-grip-vertical"></i>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input position-static" type="checkbox" id="blankCheckbox"
+                                value="option1" aria-label="...">
+                        </div>
+                        Main
+                        contact name
+                    </div>
+                </li>
+                <li class="ui-state-default " val="Name" data-billingtype="false">
+                    <div class="p-2 alert alert-secondary fade show alert_box course d-block mb-1">
+                        <i class="icon-grip fa-solid fa-grip-vertical"></i>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input position-static" type="checkbox" id="blankCheckbox"
+                                value="option1" aria-label="...">
+                        </div>
+                        Name
+                    </div>
+                </li>
+                <li class="ui-state-default " val="OneDrive Link" data-billingtype="false">
+                    <div class="p-2 alert alert-secondary fade show alert_box course d-block mb-1">
+                        <i class="icon-grip fa-solid fa-grip-vertical"></i>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input position-static" type="checkbox" id="blankCheckbox"
+                                value="option1" aria-label="...">
+                        </div>
+                        OneDrive Link
+                    </div>
+                </li>
+                <li class="ui-state-default " val="PostalCode" data-billingtype="false">
+                    <div class="p-2 alert alert-secondary fade show alert_box course d-block mb-1">
+                        <i class="icon-grip fa-solid fa-grip-vertical"></i>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input position-static" type="checkbox" id="blankCheckbox"
+                                value="option1" aria-label="...">
+                        </div>
+                        Postal code
+                    </div>
+                </li>
+                <li class="ui-state-default " val="Province" data-billingtype="false">
+                    <div class="p-2 alert alert-secondary fade show alert_box course d-block mb-1">
+                        <i class="icon-grip fa-solid fa-grip-vertical"></i>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input position-static" type="checkbox" id="blankCheckbox"
+                                value="option1" aria-label="...">
+                        </div> Province
+                    </div>
+                </li>
+                <li class="ui-state-default " val="StartDate" data-billingtype="false">
+                    <div class="p-2 alert alert-secondary fade show alert_box course d-block mb-1">
+                        <i class="icon-grip fa-solid fa-grip-vertical"></i>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input position-static" type="checkbox" id="blankCheckbox"
+                                value="option1" aria-label="...">
+                        </div>
+                        Start Date
+                    </div>
+                </li>
+                <li class="ui-state-default " val="Telephone" data-billingtype="false">
+                    <div class="p-2 alert alert-secondary fade show alert_box course d-block mb-1">
+                        <i class="icon-grip fa-solid fa-grip-vertical"></i>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input position-static" type="checkbox" id="blankCheckbox"
+                                value="option1" aria-label="...">
+                        </div> Telephone
+                    </div>
+                </li>
+                <li class="ui-state-default " val="TotalShifts" data-billingtype="false">
+                    <div class="p-2 alert alert-secondary fade show alert_box course d-block mb-1">
+                        <i class="icon-grip fa-solid fa-grip-vertical"></i>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input position-static" type="checkbox" id="blankCheckbox"
+                                value="option1" aria-label="...">
+                        </div> Total
+                        Assignments
+                    </div>
+                </li>
+                <li class="ui-state-default " val="TotalHours" data-billingtype="false">
+                    <div class="p-2 alert alert-secondary fade show alert_box course d-block mb-1">
+                        <i class="icon-grip fa-solid fa-grip-vertical"></i>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input position-static" type="checkbox" id="blankCheckbox"
+                                value="option1" aria-label="...">
+                        </div> Total Hours
+                    </div>
+                </li>
+
+                <li class="ui-state-default" val="AlternateContactName" data-billingtype="false" style="">
+                    <div class="p-2 alert alert-secondary fade show alert_box course d-block mb-1">
+                        <i class="icon-grip fa-solid fa-grip-vertical"></i>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input position-static" type="checkbox" id="blankCheckbox"
+                                value="option1" aria-label="...">
+                        </div> Alternate contact name
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+    <script>
+        $(function () {
+            $("ul.droptrue").sortable({
+                connectWith: "ul",
+                stop: function (event, ui) {
+                    var cols = '';
+                    var billingtypeCols = ''
+                    $('#sortable2').children().each(function () {
+                        if ($(this).attr('data-billingtype') == 'true')
+                            billingtypeCols += $(this).attr('val').toString().replace(/,/g, 'COMMA') + ',';
+                        cols += $(this).attr('val').toString().replace(/,/g, 'COMMA') + ',';
+                    });
+                    //alert(cols);
+                    $('#hfSelectedColumns').val(cols);
+                    $('#hfSelectedBillingTypeColumns').val(billingtypeCols);
+                }
+            });
+
+            $("#demo").sortable({
+                connectWith: "ul",
+                stop: function (event, ui) {
+                    var cols = '';
+                    var billingtypeCols = ''
+                    $('#sortable2').children().each(function () {
+                        if ($(this).attr('data-billingtype') == 'true')
+                            billingtypeCols += $(this).attr('val').toString().replace(/,/g, 'COMMA') + ',';
+                        cols += $(this).attr('val').toString().replace(/,/g, 'COMMA') + ',';
+                    });
+                    //alert(cols);
+                    $('#hfSelectedColumns').val(cols);
+                    $('#hfSelectedBillingTypeColumns').val(billingtypeCols);
+                },
+                update: function (event, ui) {
+                    ui.item.append(' (update called)');
+                }
+            });
+
+            function onSelect(event) {
+                var moveFromIndex = 1;
+                var moveToIndex = 2;
+                var $moveItem = $("#plan li:eq(" + moveFromIndex + ")");
+                $('#plan').sortable('option', 'update')(null, {
+                    item: $($moveItem).before($("#plan li:eq(" + moveToIndex + ")"))
+                });
+            };
+        })
+    </script>
+    <style>
+        #sortable2 li,
+        #sortable1 li {
+            font-size: 12px;
+            height: auto !important;
+            line-height: 18px;
+            margin: 0 !important;
+            padding: 0 !important;
+            width: 200px;
+        }
+
+        .ui-state-default,
+        .ui-widget-content .ui-state-default,
+        .ui-widget-header .ui-state-default {
+            border: none !important;
+            background: none !important;
+            font-weight: normal;
+            color: #555555;
+        }
+
+        .icon-grip::before {
+            content: "\f58e";
+        }
+    </style>
+</body>
+
+</html>

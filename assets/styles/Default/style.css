@@ -1,0 +1,115 @@
+@charset 'UTF-8';
+/*
+ * jQuery File Upload Plugin CSS Example 5.0
+ * https://github.com/blueimp/jQuery-File-Upload
+ *
+ * Copyright 2010, Sebastian Tschan
+ * https://blueimp.net
+ *
+ * Licensed under the MIT license:
+ * http://creativecommons.org/licenses/MIT/
+ */
+
+.preview img
+{
+    max-width: 75px;
+    max-height: 50px;
+}
+.fileupload-buttonbar
+{
+    background-image:none;
+    background-color:transparent; 
+    border: none;
+    padding:0;
+    margin:0;        
+}
+.name
+{
+    display:none;     
+}
+.size
+{
+    display:none;     
+}
+.fileupload-content
+{
+    border:none;
+    padding:5px;
+    background-image:none;       
+}
+.delete
+{
+    display:none;     
+}
+.files .delete
+{
+    display:table-cell;     
+}
+
+
+/*Session expire popup*/
+.popup_container {
+    visibility: hidden;
+    display: none;
+}
+.timeout_popup {
+    display:block;
+    position: fixed;
+    top: calc(50% - 200px);/*calc(50% -60px);*/
+    left: calc(50% - 150px);
+    width: 300px;
+    height: 170px;
+    text-align: center;
+    border: 1px solid #cee2e5;
+    background-color: white;
+    z-index: 10001;
+    border:1px solid lightgrey;
+    border-radius:5px;
+}
+.show_popup{
+    visibility:visible;
+    display:block;
+}
+.popup_background {
+    position:fixed;
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    background-color: rgba(200,200,200,0.5);
+    z-index:10000;
+}
+.footer {
+    padding-top: 20px;
+    height: 10px;
+}
+.btn_yes {
+    display: inline-block;
+    width: fit-content;
+    height: fit-content;
+    line-height: 10px;
+    padding: 10px;
+    border-radius: 3px;
+    border: 1px solid gray;
+    background-color: #0047AB;
+    color: white
+}
+    .btn_yes:hover {
+        background-color: darkblue;
+        cursor:pointer;
+    }
+.btn_no {
+    display: inline-block;
+    width: fit-content;
+    height: fit-content;
+    line-height: 10px;
+    padding: 10px;
+    border-radius: 3px;
+    border: 1px solid gray;
+    background-color: white;
+}
+    .btn_no:hover{
+        background-color:lightgray;
+        cursor:pointer;
+    }
+

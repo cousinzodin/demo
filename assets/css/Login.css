@@ -1,0 +1,399 @@
+﻿body {
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    font-family: Arial, Helvetica;
+    background-color: #FFF;
+}
+
+a img {
+    border: none;
+}
+
+input[type=text], input[type=password], select {
+    border: solid 1px #ddd;
+    line-height: 25px;
+    height: 25px;
+    width: 200px;
+}
+
+    input[type=text]:focus, input[type=password]:focus, textarea:focus {
+        box-shadow: 0 0 2px #ccc;
+    }
+
+textarea {
+    border: solid 1px #ddd;
+    line-height: 25px;
+    width: 250px;
+    font-family: Arial, Helvetica, Sans-Serif;
+    font-size: 12px;
+}
+
+.loginForm {
+    padding: 15px;
+    width: 540px;
+    margin: 0 auto;
+    border: solid 1px #ededed;
+    border-radius: 5px;
+    background-color: #fafafa;
+}
+
+.resetForm {
+    width: 300px;
+    margin: 20px auto;
+    text-align: center;
+}
+
+.divForm {
+    padding: 0 10px;
+    border: solid 1px #ededed;
+    border-radius: 5px;
+    background-color: #fcfcfc;
+    box-shadow: 0 0 4px #ccc;
+}
+
+.divReset {
+    padding: 0 10px;
+}
+
+.loginLogo {
+    padding: 10px;
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    border: solid 1px #ededed;
+    border-radius: 5px;
+    background-color: #FFF;
+    box-shadow: 0 0 4px #ccc;
+    text-align: center;
+}
+
+    .loginLogo img {
+        vertical-align: middle;
+    }
+
+.title {
+    line-height: 25px;
+}
+
+.button {
+    background-color: #f2f2f2;
+    border-radius: 3px;
+    border: solid 1px #dcdcdc;
+    font-size: 12px;
+    font-weight: normal;
+    text-decoration: none;
+    color: #000;
+    height: 27px;
+    line-height: 27px;
+    cursor: pointer;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+    .button:hover {
+        box-shadow: 0 0 2px #ccc;
+        background-color: #fafafa;
+    }
+
+.shiftDetails i {
+    cursor: pointer !important;
+}
+
+select.dropdown, select {
+    padding-top: 2px;
+    padding-right: 2px;
+}
+
+    select.dropdown option, select option {
+        padding: 5px 20px;
+        line-height: 22px;
+        font-size: 13px;
+        display: block;
+    }
+/* Popup */
+
+.PopUp, .PopUp2 {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: table;
+}
+
+.PopUpBack {
+    background-color: #FFF;
+    opacity: 0.8;
+    filter: alpha(opacity=80); /* internet explorer */
+    opacity: 0.8; /* fx, safari, opera, chrome */
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(opacity=80)"; /*IE8*/
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 999;
+}
+
+.PopUpCell {
+    width: 100%;
+    height: 100%;
+    vertical-align: middle;
+    display: table-cell;
+}
+
+.PopUpBox {
+    min-width: 150px;
+    margin: 0 auto;
+    z-index: 9999;
+    position: relative;
+    text-align: center;
+}
+
+.descriptionPopUp {
+    display: inline-block;
+    background-color: #FFF;
+    border: solid 1px #ededed;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #666;
+}
+
+.PopUpHeader {
+    font-size: 15px;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25);
+    padding: 5px;
+    font-weight: bold;
+    background-color: #eaeaea;
+    border-radius: 10px 10px 0 0;
+}
+
+.popUpContent, .popUpContent2 {
+    padding: 10px;
+    text-align: left;
+}
+
+.PopUpClose {
+    float: right;
+}
+
+#standard-login-info {
+    display: none;
+}
+/*respinsive changes*/
+@media (max-width: 767.98px) {
+    #standard-login-info {
+        display: block;
+    }
+
+    #lbtnShowReset {
+        display: none;
+    }
+
+    .login-container-top {
+        margin-top: 50px;
+    }
+
+    .loginForm {
+        width: initial;
+        border: none;
+        padding: 0;
+        background-color: initial;
+    }
+
+    .login-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 10px 1fr;
+        gap: 0px 0px;
+        grid-template-areas:
+            "logo"
+            "."
+            "login";
+    }
+
+    .login-logo {
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        grid-area: logo;
+        padding: 10px;
+        width: 90%;
+        height: 300px;
+        overflow: hidden;
+        background-color: #FFF;
+        text-align: center;
+    }
+
+        .login-logo img,
+        .login-form table {
+            margin: 0 auto;
+        }
+
+    .login-form {
+        margin: 0 auto;
+        grid-area: login;
+        width: 90%;
+        padding: 0;
+        border: none;
+        background-color: initial;
+    }
+
+        .login-form tr:first-child {
+            display: none;
+        }
+
+        .login-form td {
+            display: table-row;
+        }
+
+            .login-form td:last-child {
+                display: block;
+            }
+
+                .login-form td:last-child > a {
+                    text-align: center;
+                    width: 100%;
+                    display: block;
+                    float: initial;
+                    margin-top: 20px;
+                    height: 40px;
+                }
+
+                .login-form td:last-child > input {
+                    display: block;
+                    margin: 0 auto;
+                }
+
+    .login-container span.title, .login-container input, .login-container select {
+        font-size: 20px;
+        line-height: 30px;
+    }
+
+        .login-container input[type='submit'] {
+            font-size: 25px;
+            height: 50px;
+            width: 150px;
+        }
+}
+
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .login-container-top {
+        margin-top: 150px;
+    }
+
+    .login-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 10px 1fr 1fr 1fr;
+        gap: 0px 0px;
+        grid-template-areas:
+            ". . . . . ."
+            "logo logo . login login login"
+            "logo logo . login login login"
+            ". . . . . .";
+    }
+
+        .login-container span.title, .login-container input {
+            font-size: 16px;
+            line-height: 30px;
+        }
+
+            .login-container input[type='submit'] {
+                height: 30px;
+            }
+
+    .login-logo {
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        grid-area: logo;
+        padding: 10px;
+        width: 200px;
+        height: 200px;
+        overflow: hidden;
+        border: solid 1px #ededed;
+        border-radius: 5px;
+        background-color: #FFF;
+        box-shadow: 0 0 4px #ccc;
+        text-align: center;
+    }
+
+    .login-form {
+        grid-area: login;
+        padding: 0 5px;
+        border: solid 1px #ededed;
+        border-radius: 5px;
+        background-color: #fcfcfc;
+        box-shadow: 0 0 4px #ccc;
+        padding-top: 20px;
+    }
+
+        .login-form td {
+            padding-bottom: 10px;
+        }
+
+        .login-form select {
+            width: 205px;
+            height: 30px;
+        }
+}
+
+@media (min-width: 992px) {
+    .login-container-top {
+        margin-top: 150px;
+    }
+
+    .login-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 10px 1fr 1fr 1fr;
+        gap: 0px 0px;
+        grid-template-areas:
+            ". . . . . ."
+            "logo logo . login login login"
+            "logo logo . login login login"
+            ". . . . . .";
+    }
+
+        .login-container span.title, .login-container input {
+            font-size: 16px;
+            line-height: 30px;
+        }
+
+            .login-container input[type='submit'] {
+                height: 30px;
+            }
+
+    .login-logo {
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        grid-area: logo;
+        padding: 10px;
+        width: 200px;
+        height: 200px;
+        overflow: hidden;
+        border: solid 1px #ededed;
+        border-radius: 5px;
+        background-color: #FFF;
+        box-shadow: 0 0 4px #ccc;
+        text-align: center;
+    }
+
+    .login-form {
+        grid-area: login;
+        padding: 0 5px;
+        border: solid 1px #ededed;
+        border-radius: 5px;
+        background-color: #fcfcfc;
+        box-shadow: 0 0 4px #ccc;
+        padding-top: 20px;
+    }
+
+        .login-form td {
+            padding-bottom: 10px;
+        }
+
+        .login-form select {
+            width: 205px;
+            height: 30px;
+        }
+}
